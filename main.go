@@ -98,7 +98,38 @@ func isPerfectSquare(num int) bool {
 	v := math.Sqrt(float64(num))
 	return math.Mod(v, 1) == 0
 }
+
+func firstUniqChar(s string) int {
+	//O(n+m)
+	//visit := make(map[rune]int, len(s))
+	//
+	//for i := 0; i < len(s); i++ {
+	//	visit[rune(s[i])] = visit[rune(s[i])] + 1
+	//}
+	//
+	//for i, v := range s {
+	//	if visit[v] == 1 {
+	//		return i
+	//	}
+	//}
+	//return -1
+
+	set := [26]int{}
+	for i := 0; i < len(s); i++ {
+		set[s[i]-'a']++
+	}
+	fmt.Println(set)
+
+	for i := 0; i < len(s); i++ {
+		if set[s[i]-'a'] == 1 {
+			return i
+		}
+	}
+	return -1
+}
+
 func main() {
 	//fmt.Println(addBinary("1", "101"))
-	fmt.Println(isPerfectSquare(16))
+	//fmt.Println(isPerfectSquare(16))
+	fmt.Println(firstUniqChar("leetcode"))
 }
