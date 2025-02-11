@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	_42ValidAnagram "github.com/vkhangstack/leetcode_dev/_242"
-	addBinary "github.com/vkhangstack/leetcode_dev/addBinary"
+	addBinary "github.com/vkhangstack/leetcode_dev/_67"
 	deleteDuplicates "github.com/vkhangstack/leetcode_dev/deleteDuplicates"
 	firstuniqchar "github.com/vkhangstack/leetcode_dev/firstUniqChar"
 	isperfectsquare "github.com/vkhangstack/leetcode_dev/isPerfectSquare"
